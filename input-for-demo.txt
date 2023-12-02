@@ -1,6 +1,0 @@
-click app template demo
-Demonstrating https://github.com/simonw/click-app
-
-
-simonw
-Simon Willison
