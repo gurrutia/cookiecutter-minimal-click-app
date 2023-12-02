@@ -12,31 +12,21 @@ You'll need to have [cookiecutter](https://cookiecutter.readthedocs.io/) install
 
 Regular `pip` will work OK too.
 
-## Examples
-
-Three examples of tools that were initially created using this template:
-
-- [shot-scraper](https://github.com/simonw/shot-scraper): A comand-line utility for taking automated screenshots of websites
-- [s3-credentials](https://github.com/simonw/s3-credentials): A tool for creating credentials for accessing S3 buckets
-- [git-history](https://github.com/simonw/git-history):  Tools for analyzing Git history using SQLite
-
 ## Usage
 
-Run `cookiecutter gh:simonw/click-app` and then answer the prompts. Here's an example run:
+Run `cookiecutter gh:gurrutia/cookiecutter-minimal-click-app` and then answer the prompts. Here's an example run:
 
-    $ cookiecutter gh:simonw/click-app
+    $ cookiecutter gh:gurrutia/cookiecutter-minimal-click-app
     app_name []: click app template demo
-    description []: Demonstrating https://github.com/simonw/click-app
+    description []: Demonstrating https://github.com/gurrutia/cookiecutter-minimal-click-app
     hyphenated [click-app-template-demo]: 
     underscored [click_app_template_demo]: 
-    github_username []: simonw
-    author_name []: Simon Willison
+    github_username [gurrutia]: <your-username>
+    author_name [Gerardo Urrutia]: <your-name>
 
 I strongly recommend accepting the suggested value for "hyphenated" and "underscored" by hitting enter on those prompts.
 
 This will create a directory called `click-app-template-demo` - the tool name you enter is converted to lowercase and uses hyphens instead of spaces.
-
-See https://github.com/simonw/click-app-template-demo for the output of this example.
 
 ## Developing your command-line tool
 
@@ -45,13 +35,14 @@ Having created the new structure from the template, here's how to start working 
 If your tool is called `my-new-tool`, you can start working on it like so:
 
     cd my-new-tool
+
     # Create and activate a virtual environment:
     python3 -m venv venv
     source venv/bin/activate
+
     # Install dependencies so you can edit the project:
-    pip install -e '.[test]'
-    # With zsh you have to run this again for some reason:
-    source venv/bin/activate
+    pip install -e .
+
     # Confirm your tool can be run from the command-line
     my-new-tool --version
 
@@ -65,7 +56,7 @@ You can run the default test for your tool like so:
 
 This will execute the test in `tests/test_my_new_tool.py`.
 
-Now you can open the `my_new_tool/cli.py` file and start adding Click [commands and groups](https://click.palletsprojects.com/en/7.x/commands/).
+Now you can open the `my_new_tool/cli.py` file and start adding Click [commands and groups](https://click.palletsprojects.com/en/8.0.x/commands/).
 
 ## Creating a Git repository for your tool
 
