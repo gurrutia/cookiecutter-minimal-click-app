@@ -41,14 +41,14 @@ If your tool is called `my-new-tool`, you can start working on it like so:
     source venv/bin/activate
 
     # Install dependencies so you can edit the project:
-    pip install -e .
+    pip install -e .[test]
 
     # Confirm your tool can be run from the command-line
     my-new-tool --version
 
 You should see the following:
 
-    my-new-tool, version 0.1
+    my-new-tool, version 0.0.1
 
 You can run the default test for your tool like so:
 
